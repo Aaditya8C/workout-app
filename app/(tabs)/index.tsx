@@ -10,16 +10,18 @@ import {
 import React from "react";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Icon from "react-native-vector-icons/Ionicons";
+
 const Index = () => {
   const router = useRouter();
   return (
     <SafeAreaView className="flex-1">
       <ScrollView className="flex-1 flex flex-col gap-2 bg-white">
-        <View className="pt-2 flex flex-row justify-center">
-          <Image
-            className="w-7 h-7 mr-2"
-            source={require("../../assets/images/dumbbell.png")}
-          />
+        <View className="flex flex-row justify-center items-center gap-1">
+          <Text className="">
+            <Icon name="barbell" size={30} />
+          </Text>
+
           <Text className="text-2xl text-violet-600 font-bold">कसरत</Text>
         </View>
         <View className="w-[90%] self-center">
@@ -40,9 +42,9 @@ const Index = () => {
             <Text className="text-lg font-semibold">
               Shoulders - Variation 1
             </Text>
-            <Image
-              className="w-5 h-5 mr-2"
-              source={require("../../assets/images/threedots.png")}></Image>
+            <Text className="">
+              <Icon name="ellipsis-vertical" size={20} />
+            </Text>
           </View>
           <View className="">
             <Text className="text-gray-500 ">{"2x Plank (Core)"}</Text>
