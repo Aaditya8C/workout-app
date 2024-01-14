@@ -5,13 +5,17 @@ import {
   TextInput,
   Image,
   Pressable,
+  FlatList,
 } from "react-native";
 import React, { useState } from "react";
 import { useRouter } from "expo-router";
-
+// import { ExerciseCard } from "./addExercise";
+import exerciseData from "../constants/exercise_data";
 const CreateTemplate = () => {
   const router = useRouter();
   const [text, onChangeText] = useState("New Template");
+  const [exercises, onChangeExercises] = useState(["1", "2", "3", "4"]);
+
   return (
     <View className="flex-1 flex bg-white">
       <View className=" relative">
@@ -34,6 +38,14 @@ const CreateTemplate = () => {
           ADD EXERCISE
         </Text>
       </Pressable>
+      {/* <FlatList
+        data={exerciseData.filter((element) => exercises.includes(element.id))}
+        renderItem={({ item }) => {
+          return <ExerciseCard item={item}></ExerciseCard>;
+        }}
+        keyExtractor={(item) => item.id}
+        ItemSeparatorComponent={() => <View className="p-1"></View>}
+      /> */}
     </View>
   );
 };
