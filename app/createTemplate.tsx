@@ -9,20 +9,28 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { useRouter } from "expo-router";
-// import { ExerciseCard } from "./addExercise";
-import exerciseData from "../constants/exercise_data";
+import { useSelector, useDispatch } from "react-redux";
+import { renameNewTemplate } from "../Redux/Actions/actions";
+
 const CreateTemplate = () => {
   const router = useRouter();
-  const [text, onChangeText] = useState("New Template");
-  const [exercises, onChangeExercises] = useState(["1", "2", "3", "4"]);
+  const dispatch = useDispatch();
+  const templateName = useSelector((state: any) => {
+    return state.newTemplate.templateName;
+  });
+  const templateExercises = useSelector((state: any) => {
+    return state.newTemplate.exercises;
+  });
 
   return (
     <View className="flex-1 flex bg-white">
       <View className=" relative">
         <TextInput
           className="p-2 border-2 border-violet-400 my-1 text-lg font-semibold"
-          onChangeText={onChangeText}
-          value={text}
+          onChangeText={(text) => {
+            dispatch(renameNewTemplate(text));
+          }}
+          value={templateName}
           autoFocus
         />
         <Image
@@ -32,20 +40,18 @@ const CreateTemplate = () => {
       </View>
       <Pressable
         onPress={() => {
-          router.push("/addExercise");
+          router.push({
+            pathname: "/addExercise",
+            params: { templateName },
+          });
         }}>
         <Text className=" text-blue-400 text-lg font-semibold self-center pt-3">
           ADD EXERCISE
         </Text>
       </Pressable>
-      {/* <FlatList
-        data={exerciseData.filter((element) => exercises.includes(element.id))}
-        renderItem={({ item }) => {
-          return <ExerciseCard item={item}></ExerciseCard>;
-        }}
-        keyExtractor={(item) => item.id}
-        ItemSeparatorComponent={() => <View className="p-1"></View>}
-      /> */}
+      {templateExercises.map((itemid: any) => {
+        return <Text key={itemid}>{itemid}</Text>;
+      })}
     </View>
   );
 };

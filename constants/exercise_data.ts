@@ -15,49 +15,49 @@
     },
     {
         id:"3",
-        name:"Bicep Curls",
+        name:"Dumbbell Curls",
         equipment:"Dumbbell",
-        bodypart:"Arms",
+        bodypart:"Legs",
         icon:require("../assets/images/legsicon.png")
     },
     {   id:'4',
-        name:"Bicep Curls",
-        equipment:"Dumbbell",
-        bodypart:"Arms",
+        name:"Plank",
+        equipment:"Bodyweight",
+        bodypart:"Core",
         icon:require("../assets/images/armsicon.png")
     },
     {
         id:'5',
-        name:"Bicep Curls",
-        equipment:"Dumbbell",
-        bodypart:"Arms",
+        name:"Battle Ropes",
+        equipment:"Rope",
+        bodypart:"Core",
         icon:require("../assets/images/chesticon.png")
     },
     {
         id:"6",
-        name:"Bicep Curls",
-        equipment:"Dumbbell",
-        bodypart:"Arms",
+        name:"Leg Press",
+        equipment:"Machine",
+        bodypart:"Legs",
         icon:require("../assets/images/legsicon.png")
     },
     {   id:'7',
-        name:"Bicep Curls",
-        equipment:"Dumbbell",
-        bodypart:"Arms",
+        name:"Flat Leg Hanging Raise",
+        equipment:"Bodyweight",
+        bodypart:"Abs",
         icon:require("../assets/images/armsicon.png")
     },
     {
         id:'8',
-        name:"Bicep Curls",
-        equipment:"Dumbbell",
-        bodypart:"Arms",
+        name:"Reverse Fly",
+        equipment:"Machine",
+        bodypart:"Back",
         icon:require("../assets/images/chesticon.png")
     },
     {
         id:"9",
-        name:"Bicep Curls",
+        name:"Lateral Raises",
         equipment:"Dumbbell",
-        bodypart:"Arms",
+        bodypart:"Shoulders",
         icon:require("../assets/images/legsicon.png")
     },
     {

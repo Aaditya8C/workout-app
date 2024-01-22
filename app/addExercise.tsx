@@ -2,69 +2,93 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   FlatList,
-  Pressable,
   Text,
   TouchableOpacity,
   View,
   Image,
 } from "react-native";
 import exerciseData from "../constants/exercise_data";
+import Icon from "react-native-vector-icons/Ionicons";
+import ExerciseCard from "../components/exerciseCard";
+import { useRouter, useLocalSearchParams } from "expo-router";
+// import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addExerciseToNewTemplate,
+  removeExerciseFromNewTemplate,
+} from "../Redux/Actions/actions";
 
 const data = exerciseData;
 
 const AddExercisePage = () => {
-  const [selectedItems, setSelectedItems] = useState<string[]>([]);
-  const handleOnPress = (id: any) => {
-    if (selectedItems.includes(id)) {
-      setSelectedItems(selectedItems.filter((itemid) => itemid !== id));
+  const dispatch = useDispatch();
+  const templateName = useSelector((state: any) => {
+    return state.newTemplate.templateName;
+  });
+  const templateExercises = useSelector((state: any) => {
+    return state.newTemplate.exercises;
+  });
+  const router = useRouter();
+
+  const handleOnPress = (id: string) => {
+    if (templateExercises.includes(id)) {
+      dispatch(removeExerciseFromNewTemplate(id));
     } else {
-      setSelectedItems([...selectedItems, id]);
+      dispatch(addExerciseToNewTemplate(id));
     }
   };
 
+  const handleCheckPress = async () => {
+    router.back();
+  };
+
   return (
-    <View className="">
+    <View className="relative">
       <FlatList
         data={data}
         renderItem={({ item }) => (
           <ExerciseCard
             item={item}
-            handleOnPress={handleOnPress}
-            selectedItems={selectedItems}></ExerciseCard>
+            handleOnPress={() => {
+              handleOnPress(item.id);
+            }}
+            selectedItems={templateExercises}></ExerciseCard>
         )}
         keyExtractor={(item) => item.id}
-        ItemSeparatorComponent={() => <View className="p-2"></View>}
         ListHeaderComponent={() => <View className="py-2"></View>}
       />
+      {templateExercises.length !== 0 && (
+        <View className="absolute bottom-6 right-6">
+          <TouchableOpacity
+            onPress={() => {
+              handleCheckPress();
+            }}>
+            <Icon name="checkmark-circle" color={"#9747ff"} size={70} />
+          </TouchableOpacity>
+        </View>
+      )}
     </View>
   );
 };
 
-const ExerciseCard = ({ item, handleOnPress, selectedItems }: any) => (
-  <TouchableOpacity
-    onPress={() => {
-      handleOnPress(item.id);
-    }}>
-    <View
-      className="flex flex-row items-center gap-3 pl-2"
-      style={selectedItems.includes(item.id) ? styles.background : styles.none}>
-      <View className="rounded-full  w-12 h-12 border border-violet-300">
-        <Image className="rounded-full w-full h-full" source={item.icon} />
-      </View>
-      <View>
-        <Text>
-          {item.name} ({item.equipment})
-        </Text>
-        <Text className=" text-gray-400">{item.bodypart}</Text>
-      </View>
-    </View>
-  </TouchableOpacity>
-);
-
 const styles = StyleSheet.create({
-  background: {
-    backgroundColor: "red",
+  container: {
+    flex: 1,
+    justifyContent: "center",
   },
-  none: {},
+  text: {
+    fontSize: 16,
+  },
+  wrapperCustom: {
+    borderRadius: 8,
+    padding: 6,
+  },
+  logBox: {
+    padding: 20,
+    margin: 10,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: "#f0f0f0",
+    backgroundColor: "#f9f9f9",
+  },
 });
 export default AddExercisePage;
