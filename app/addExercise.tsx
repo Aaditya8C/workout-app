@@ -22,9 +22,6 @@ const data = exerciseData;
 
 const AddExercisePage = () => {
   const dispatch = useDispatch();
-  const templateName = useSelector((state: any) => {
-    return state.newTemplate.templateName;
-  });
   const templateExercises = useSelector((state: any) => {
     return state.newTemplate.exercises;
   });

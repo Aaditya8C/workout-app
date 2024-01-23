@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
-import uuid from 'react-native-uuid';
+
+import store from "../Store/store";
 
 // for newTemplateReducer
 export const ADD_EXERCISE_TO_NEW_TEMPLATE  = "ADD_EXERCISE_TO_NEW_TEMPLATE";
@@ -17,9 +18,8 @@ export const resetNewTemplate  = ()=>({type:RESET_NEW_TEMPLATE});
 export const ADD_TEMPLATE = "ADD_TEMPLATE";
 export const REMOVE_TEMPLATE = "REMOVE_TEMPLATE";
 
-export const addTemplate = ()=>{
-    const template = useSelector((state:any)=>{return {...state.newTemplate,id:uuid.v4()}});
-    return {type:ADD_TEMPLATE,template:template};
+export const addTemplate = (template:any)=>{
+    return {type:ADD_TEMPLATE,template};
 }
 
 export const removeTemplate = (id:string)=>{

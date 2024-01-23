@@ -1,4 +1,4 @@
-import { RENAME_NEW_TEMPLATE,ADD_EXERCISE_TO_NEW_TEMPLATE,REMOVE_EXERCISE_FROM_NEW_TEMPLATE } from "../Actions/actions";
+import { RENAME_NEW_TEMPLATE,ADD_EXERCISE_TO_NEW_TEMPLATE,REMOVE_EXERCISE_FROM_NEW_TEMPLATE, RESET_NEW_TEMPLATE } from "../Actions/actions";
 
 interface NewTemplateState{
     templateName: string,
@@ -24,6 +24,10 @@ const newTemplateReducer  = (state = initialState, action:any) => {
         case REMOVE_EXERCISE_FROM_NEW_TEMPLATE:
             { const exercises_copy = state.exercises.filter((item)=>{return item!==action.id})
             return {...state,exercises:exercises_copy};
+            }
+        case RESET_NEW_TEMPLATE:
+            {
+                return {...state,templateName:"New Template",exercises:[]}
             }
         default:
             return state;

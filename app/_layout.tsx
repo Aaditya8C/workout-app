@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Stack } from "expo-router";
 import { Provider } from "react-redux";
 import store from "../Redux/Store/store";
+import { Stack } from "expo-router";
+
 const RootLayout = () => {
   return (
     <Provider store={store}>
@@ -14,7 +14,9 @@ const RootLayout = () => {
           }}></Stack.Screen>
         <Stack.Screen
           name="createTemplate"
-          options={{ headerTitle: "Create New Template" }}></Stack.Screen>
+          options={{
+            headerTitle: "Create New Template",
+          }}></Stack.Screen>
         <Stack.Screen
           name="addExercise"
           options={{ headerTitle: "Add Exercises" }}></Stack.Screen>

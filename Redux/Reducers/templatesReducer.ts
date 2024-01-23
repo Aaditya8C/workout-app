@@ -1,4 +1,5 @@
-import { ADD_TEMPLATE,REMOVE_TEMPLATE } from "../Actions/actions";
+import { useDispatch } from "react-redux";
+import { ADD_TEMPLATE,REMOVE_TEMPLATE, resetNewTemplate } from "../Actions/actions";
 
 interface Templates{
     id:string,
@@ -11,8 +12,9 @@ const initialState :Array<Templates> = [{id:"sdfs22dfdsfsd",templateName:"Boulde
 
 const templatesReducer  = (state = initialState, action:any) => {
     switch (action.type) {
-        case ADD_TEMPLATE:
-            return [...state,action.template];
+        case ADD_TEMPLATE:{
+            return [...state,action.template]
+        };
         case REMOVE_TEMPLATE:
             {
             return state.filter((template)=>{return template.id!==action.id});
