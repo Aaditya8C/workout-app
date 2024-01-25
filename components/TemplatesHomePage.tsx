@@ -14,7 +14,6 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { useRouter } from "expo-router";
 import TemplateCard from "./templateCard";
 import { useSelector } from "react-redux";
-import exerciseData from "../constants/exercise_data";
 
 const TemplatesHomePage = () => {
   const router = useRouter();

@@ -1,15 +1,48 @@
-import { View, Text, TextInput } from "react-native";
-import React from "react";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  FlatList,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+} from "react-native";
+import exerciseData from "../../constants/exercise_data";
+import { icons, getIcon } from "../../constants/icon_mapping";
 
+const data = exerciseData;
 const Exercise = () => {
   return (
     <View>
-      <Text className="p-2 border-2 border-violet-400 my-1 text-lg font-semibold">
-        Add Exercises...
-      </Text>
+      <FlatList
+        data={data}
+        renderItem={({ item }) => {
+          return (
+            <TouchableOpacity>
+              <View className="flex flex-row space-x-3  px-3 py-2">
+                <View className="h-12 w-12">
+                  <View className="rounded-full border border-violet-300">
+                    <Image
+                      className="rounded-full w-full h-full"
+                      source={getIcon(item.bodyPart)}
+                    />
+                  </View>
+                </View>
+                <View className="flex justify-center">
+                  <Text>
+                    {item.name} ({item.equipment})
+                  </Text>
+                  <Text className=" text-gray-400">{item.bodyPart}</Text>
+                </View>
+              </View>
+            </TouchableOpacity>
+          );
+        }}
+        keyExtractor={(item) => item.id}
+        ListHeaderComponent={() => <View className="py-2"></View>}
+      />
     </View>
   );
 };
-``;
 
 export default Exercise;

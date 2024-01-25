@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View, Image } from "react-native";
-
+import { icons, getIcon } from "../constants/icon_mapping";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const ExerciseCard = ({ item, handleOnPress, selectedItems }: any) => (
@@ -12,7 +12,10 @@ const ExerciseCard = ({ item, handleOnPress, selectedItems }: any) => (
       <View className="h-12 w-12">
         <View className="rounded-full border border-violet-300">
           {!selectedItems.includes(item.id) ? (
-            <Image className="rounded-full w-full h-full" source={item.icon} />
+            <Image
+              className="rounded-full w-full h-full"
+              source={getIcon(item.bodyPart)}
+            />
           ) : (
             <View className="p-2">
               <Icon name="checkmark" size={30} />
@@ -24,7 +27,7 @@ const ExerciseCard = ({ item, handleOnPress, selectedItems }: any) => (
         <Text>
           {item.name} ({item.equipment})
         </Text>
-        <Text className=" text-gray-400">{item.bodypart}</Text>
+        <Text className=" text-gray-400">{item.bodyPart}</Text>
       </View>
     </View>
   </TouchableOpacity>

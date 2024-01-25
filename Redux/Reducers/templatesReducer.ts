@@ -7,8 +7,9 @@ interface Templates{
     exercises:Array<string>
 }
 
-const initialState :Array<Templates> = [{id:"sdfs22dfdsfsd",templateName:"Boulders Gunda Bro",exercises:["12","5","7","8","9"]},{id:"sdfsdfdssdf3fsd",templateName:"Legs Bro",exercises:["4","5","6","7"]}];
-
+const initialState =[
+        {id:"sdfs22dfdsfsd",templateName:"Legs Day Vairation -1 (Monday)",exercises:["0001","1512","1709","0016"]}
+    ]
 
 const templatesReducer  = (state = initialState, action:any) => {
     switch (action.type) {
@@ -17,7 +18,7 @@ const templatesReducer  = (state = initialState, action:any) => {
         };
         case REMOVE_TEMPLATE:
             {
-            return state.filter((template)=>{return template.id!==action.id});
+            return [state.filter((template)=>{return template.id!==action.id})];
             }
         default:
             return state;

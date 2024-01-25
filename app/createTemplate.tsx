@@ -77,7 +77,7 @@ const CreateTemplate = () => {
           renderItem={({ item }: any) => {
             const ex = getExercise(item);
             return (
-              <Text className="text-gray-500 ">{`3 X ${ex.name} (${ex.equipment}) - ${ex.bodypart}`}</Text>
+              <Text className="text-gray-500 ">{`3 X ${ex.name} (${ex.equipment}) - ${ex.bodyPart}`}</Text>
             );
           }}
         />

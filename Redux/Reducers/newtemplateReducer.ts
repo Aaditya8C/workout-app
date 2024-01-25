@@ -6,8 +6,8 @@ interface NewTemplateState{
 }
 
 const initialState :NewTemplateState = {
-    templateName:"Shoulders - Variation 1",
-    exercises:["1","2","5","4","3","9"]
+    templateName:"New Template",
+    exercises:[]
 }
 
 

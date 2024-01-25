@@ -15,7 +15,7 @@ const TemplateCard = ({ template }: any) => {
   };
   return (
     <View className="border self-center w-[95%] border-gray-300 p-2 rounded-md">
-      <View className="flex flex-row justify-between">
+      <View className="flex flex-row justify-between items-center">
         <Text className="text-lg font-semibold">{template.templateName}</Text>
         <Icon name="ellipsis-vertical" size={20} />
       </View>
@@ -25,7 +25,9 @@ const TemplateCard = ({ template }: any) => {
           renderItem={({ item }: any) => {
             const ex = getExercise(item);
             return (
-              <Text className="text-gray-500 ">{`3 X ${ex.name} (${ex.equipment}) - ${ex.bodypart}`}</Text>
+              ex && (
+                <Text className="text-gray-500 ">{`3 X ${ex.name} (${ex.equipment}) - ${ex.bodyPart}`}</Text>
+              )
             );
           }}
         />

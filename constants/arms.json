@@ -1,0 +1,165 @@
+"arms":[
+  {
+    "bodyPart": "lower arms",
+    "equipment": "band",
+    "gifUrl": "https://v2.exercisedb.io/image/049M2TDX6fDHzw",
+    "id": "0994",
+    "name": "band reverse wrist curl",
+    "target": "forearms",
+    "secondaryMuscles": ["forearms"],
+    "instructions": [
+      "Sit on a bench or chair with your feet flat on the ground.",
+      "Hold the band with an overhand grip, palms facing down, and wrap it around your fingers.",
+      "Rest your forearms on your thighs, with your wrists hanging off the edge.",
+      "Slowly curl your wrists upward, squeezing your forearms.",
+      "Pause for a moment at the top, then slowly lower your wrists back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "bodyPart": "lower arms",
+    "equipment": "band",
+    "gifUrl": "https://v2.exercisedb.io/image/IZ541GO6h1ixJa",
+    "id": "1016",
+    "name": "band wrist curl",
+    "target": "forearms",
+    "secondaryMuscles": ["biceps", "triceps"],
+    "instructions": [
+      "Sit on a bench or chair with your feet flat on the ground.",
+      "Hold the band with both hands, palms facing up, and rest your forearms on your thighs.",
+      "Slowly curl your wrists upward, squeezing your forearms.",
+      "Pause for a moment at the top, then slowly lower your wrists back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "bodyPart": "lower arms",
+    "equipment": "barbell",
+    "gifUrl": "https://v2.exercisedb.io/image/-THT0I1RHzIqT9",
+    "id": "1411",
+    "name": "barbell palms down wrist curl over a bench",
+    "target": "forearms",
+    "secondaryMuscles": ["biceps", "brachialis"],
+    "instructions": [
+      "Sit on a bench with your feet flat on the ground and your forearms resting on your thighs, palms facing down.",
+      "Hold a barbell with an overhand grip, hands shoulder-width apart.",
+      "Lower the barbell towards the ground by flexing your wrists, keeping your forearms stationary.",
+      "Pause for a moment at the bottom, then slowly raise the barbell back up by extending your wrists.",
+      "Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "bodyPart": "lower arms",
+    "equipment": "barbell",
+    "gifUrl": "https://v2.exercisedb.io/image/Jjw5nS4kK8FcUA",
+    "id": "1412",
+    "name": "barbell palms up wrist curl over a bench",
+    "target": "forearms",
+    "secondaryMuscles": ["biceps", "shoulders"],
+    "instructions": [
+      "Sit on a bench with your feet flat on the ground and hold a barbell with an underhand grip, palms facing up.",
+      "Rest your forearms on the bench, allowing your wrists to hang off the edge.",
+      "Keeping your forearms stationary, exhale and curl your wrists upwards as far as possible.",
+      "Hold the contracted position for a brief pause, then inhale and slowly lower the barbell back to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "bodyPart": "lower arms",
+    "equipment": "barbell",
+    "gifUrl": "https://v2.exercisedb.io/image/9kpRx2eq3ZtSvq",
+    "id": "0079",
+    "name": "barbell revers wrist curl v. 2",
+    "target": "forearms",
+    "secondaryMuscles": ["biceps", "brachialis"],
+    "instructions": [
+      "Sit on a bench with your feet flat on the ground and your knees bent.",
+      "Hold a barbell with an overhand grip, palms facing down, and your hands shoulder-width apart.",
+      "Rest your forearms on your thighs, allowing your wrists to hang off the edge.",
+      "Keeping your forearms stationary, exhale and curl your wrists upward as far as possible.",
+      "Hold the contracted position for a brief pause, then inhale and slowly lower the barbell back to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ]
+  },
+
+  {
+    "bodyPart": "upper arms",
+    "equipment": "assisted",
+    "gifUrl": "https://v2.exercisedb.io/image/Pj32SqT6LroPH8",
+    "id": "0018",
+    "name": "assisted standing triceps extension (with towel)",
+    "target": "triceps",
+    "secondaryMuscles": ["shoulders"],
+    "instructions": [
+      "Stand with your feet shoulder-width apart and hold a towel with both hands behind your head.",
+      "Keep your elbows close to your ears and your upper arms stationary.",
+      "Slowly extend your forearms upward, squeezing your triceps at the top.",
+      "Pause for a moment, then slowly lower the towel back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "bodyPart": "upper arms",
+    "equipment": "leverage machine",
+    "gifUrl": "https://v2.exercisedb.io/image/q97IjpQ5UOVCzi",
+    "id": "0019",
+    "name": "assisted triceps dip (kneeling)",
+    "target": "triceps",
+    "secondaryMuscles": ["chest", "shoulders"],
+    "instructions": [
+      "Adjust the machine to your desired weight and height.",
+      "Kneel down on the pad facing the machine, with your hands gripping the handles.",
+      "Lower your body by bending your elbows, keeping your back straight and close to the machine.",
+      "Pause for a moment at the bottom, then push yourself back up to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "bodyPart": "upper arms",
+    "equipment": "band",
+    "gifUrl": "https://v2.exercisedb.io/image/lBzQTt9X9OVZQd",
+    "id": "0968",
+    "name": "band alternating biceps curl",
+    "target": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "instructions": [
+      "Stand with your feet shoulder-width apart and hold the band with an underhand grip, palms facing up.",
+      "Keep your elbows close to your sides and slowly curl one arm up towards your shoulder, squeezing your biceps at the top.",
+      "Lower the arm back down to the starting position and repeat with the other arm.",
+      "Continue alternating arms for the desired number of repetitions."
+    ]
+  },
+  {
+    "bodyPart": "upper arms",
+    "equipment": "band",
+    "gifUrl": "https://v2.exercisedb.io/image/tdd5d797GygMIJ",
+    "id": "0975",
+    "name": "band close-grip push-up",
+    "target": "triceps",
+    "secondaryMuscles": ["chest", "shoulders"],
+    "instructions": [
+      "Place a band around your upper arms, just above the elbows.",
+      "Assume a push-up position with your hands directly under your shoulders and your body in a straight line from head to heels.",
+      "Bend your elbows and lower your chest towards the ground, keeping your elbows close to your sides.",
+      "Push through your palms to extend your arms and return to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ]
+  },
+  {
+    "bodyPart": "upper arms",
+    "equipment": "band",
+    "gifUrl": "https://v2.exercisedb.io/image/KpDd3BdjeUkVaz",
+    "id": "0976",
+    "name": "band concentration curl",
+    "target": "biceps",
+    "secondaryMuscles": ["forearms"],
+    "instructions": [
+      "Sit on a bench or chair with your legs spread apart and your feet flat on the ground.",
+      "Hold one end of the band in your hand and step on the other end with your foot on the same side.",
+      "Lean forward slightly and rest your elbow on the inside of your thigh, just above the knee.",
+      "With your palm facing up, slowly curl your hand towards your shoulder, keeping your upper arm stationary.",
+      "Pause for a moment at the top, then slowly lower your hand back down to the starting position.",
+      "Repeat for the desired number of repetitions, then switch sides."
+    ]
+  }
+]

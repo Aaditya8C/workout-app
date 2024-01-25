@@ -12,7 +12,16 @@ import {
 import TemplateHomePage from "../../components/TemplatesHomePage";
 
 const Index = () => {
-  return <TemplateHomePage />;
+  return (
+    <>
+      <StatusBar
+        animated={true}
+        backgroundColor="white"
+        barStyle={"dark-content"}
+      />
+      <TemplateHomePage />
+    </>
+  );
 };
 
 export default Index;
