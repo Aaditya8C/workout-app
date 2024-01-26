@@ -3,6 +3,7 @@ import React from "react";
 import Icon from "react-native-vector-icons/Ionicons";
 import exerciseData from "../constants/exercise_data";
 import { FlatList } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 const data = exerciseData;
 
@@ -17,7 +18,11 @@ const TemplateCard = ({ template }: any) => {
     <View className="border self-center w-[95%] border-gray-300 p-2 rounded-md">
       <View className="flex flex-row justify-between items-center">
         <Text className="text-lg font-semibold">{template.templateName}</Text>
-        <Icon name="ellipsis-vertical" size={20} />
+        <TouchableOpacity>
+          <Text>
+            <Icon name="ellipsis-vertical" size={20} />
+          </Text>
+        </TouchableOpacity>
       </View>
       <View>
         <FlatList

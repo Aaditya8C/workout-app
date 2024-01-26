@@ -35,6 +35,7 @@ const TabsLayout = () => {
         }}></Tabs.Screen>
       <Tabs.Screen
         options={{
+          headerShown: false,
           title: "Exercise",
           tabBarIcon: ({ color, focused }) => {
             return (
