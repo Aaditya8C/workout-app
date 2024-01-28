@@ -14,6 +14,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { useRouter } from "expo-router";
 import TemplateCard from "./templateCard";
 import { useSelector } from "react-redux";
+import { MenuProvider } from "react-native-popup-menu";
 
 const TemplatesHomePage = () => {
   const router = useRouter();
@@ -21,8 +22,8 @@ const TemplatesHomePage = () => {
     return state.templates;
   });
   return (
-    <SafeAreaView className="flex-1">
-      <View className="flex-1 flex flex-col gap-2 bg-white">
+    <SafeAreaView className="flex-1 bg-white">
+      <View className="flex-1 flex flex-col gap-2">
         <View className="flex flex-row justify-center items-center gap-1">
           <Text className="">
             <Icon name="barbell" size={30} />
@@ -43,15 +44,16 @@ const TemplatesHomePage = () => {
             MY TEMPLATES
           </Text>
         </View>
-
-        <FlatList
-          data={templates}
-          renderItem={(template: any) => {
-            return <TemplateCard template={template.item} />;
-          }}
-          keyExtractor={(item) => item.id}
-          ItemSeparatorComponent={() => <View className="p-1"></View>}
-        />
+        <MenuProvider>
+          <FlatList
+            data={templates}
+            renderItem={({ item }) => {
+              return <TemplateCard template={item} />;
+            }}
+            keyExtractor={(item) => item.id}
+            ItemSeparatorComponent={() => <View className="p-1"></View>}
+          />
+        </MenuProvider>
       </View>
     </SafeAreaView>
   );
