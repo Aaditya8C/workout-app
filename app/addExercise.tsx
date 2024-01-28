@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import {
   StyleSheet,
   FlatList,
@@ -11,51 +11,89 @@ import exerciseData from "../constants/exercise_data";
 import Icon from "react-native-vector-icons/Ionicons";
 import ExerciseCard from "../components/exerciseCard";
 import { useRouter, useLocalSearchParams } from "expo-router";
-// import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addExerciseToNewTemplate,
-  removeExerciseFromNewTemplate,
-} from "../Redux/Actions/actions";
-
-const data = exerciseData;
+import { setNewTemplate } from "../Redux/Actions/actions";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { TextInput } from "react-native";
+import { Pressable } from "react-native";
 
 const AddExercisePage = () => {
   const dispatch = useDispatch();
-  const templateExercises = useSelector((state: any) => {
-    return state.newTemplate.exercises;
+  const newTemplateState = useSelector((state: any) => {
+    return state.newTemplate;
   });
+  const [localCopyExercises, setLocalCopyExercises] = useState(
+    newTemplateState.exercises
+  );
   const router = useRouter();
 
-  const handleOnPress = (id: string) => {
-    if (templateExercises.includes(id)) {
-      dispatch(removeExerciseFromNewTemplate(id));
-    } else {
-      dispatch(addExerciseToNewTemplate(id));
-    }
+  const handleSelect = (id: string) => {
+    setLocalCopyExercises((state: any) => [...state, id]);
   };
-
-  const handleCheckPress = async () => {
+  const handleDeselect = (id: string) => {
+    setLocalCopyExercises((state: any) =>
+      state.filter((item: any) => item !== id)
+    );
+  };
+  const handleCheckPress = () => {
+    dispatch(
+      setNewTemplate({ ...newTemplateState, exercises: localCopyExercises })
+    );
     router.back();
   };
-
+  const [searchText, setSearchText] = useState("");
+  const [filteredData, setFilteredData] = useState(exerciseData);
   return (
-    <View className="relative">
-      <FlatList
-        data={data}
-        renderItem={({ item }) => (
-          <ExerciseCard
-            item={item}
-            handleOnPress={() => {
-              handleOnPress(item.id);
-            }}
-            selectedItems={templateExercises}></ExerciseCard>
-        )}
-        keyExtractor={(item) => item.id}
-        ListHeaderComponent={() => <View className="py-2"></View>}
-      />
-      {templateExercises.length !== 0 && (
-        <View className="absolute bottom-6 right-6">
+    <SafeAreaView className="relative flex-1 bg-white">
+      <View className="flex flex-row justify-around items-center p-2 relative">
+        <Pressable
+          onPress={() => {
+            router.back();
+          }}>
+          <Icon name="arrow-back" size={30}></Icon>
+        </Pressable>
+        <TextInput
+          className="px-4 py-2 bg-slate-200 w-[70%] text-lg rounded-lg text-gray-600"
+          onChangeText={(text) => {
+            setSearchText(text);
+            setFilteredData(
+              exerciseData.filter((item) => {
+                if (searchText === "") {
+                  return true;
+                }
+                return (
+                  item.name.includes(searchText.toLowerCase()) ||
+                  item.bodyPart.includes(searchText.toLowerCase())
+                );
+              })
+            );
+          }}
+          value={searchText}
+          autoFocus></TextInput>
+        <Text className="absolute right-10 text-gray-400">
+          <Icon name="close-outline" size={25}></Icon>
+        </Text>
+      </View>
+      <View>
+        <FlatList
+          data={filteredData}
+          renderItem={({ item }) => {
+            return (
+              <ExerciseCard
+                item={item}
+                handleDeselect={handleDeselect}
+                handleSelect={handleSelect}
+                isSelected={localCopyExercises.includes(
+                  item.id
+                )}></ExerciseCard>
+            );
+          }}
+          keyExtractor={(item) => item.id}
+          ListHeaderComponent={() => <View className="py-2"></View>}
+        />
+      </View>
+      {localCopyExercises.length !== 0 && (
+        <View className="absolute bottom-10 right-5">
           <TouchableOpacity
             onPress={() => {
               handleCheckPress();
@@ -64,7 +102,7 @@ const AddExercisePage = () => {
           </TouchableOpacity>
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -44,7 +44,11 @@ const TemplateCard = ({ template }: any) => {
                 }}>
                 <Text className="p-2 text-white">Edit</Text>
               </MenuOption>
-              <MenuOption onSelect={() => {}}>
+              <MenuOption
+                onSelect={() => {
+                  dispatch(setNewTemplate(template));
+                  router.push("/createTemplate");
+                }}>
                 <Text className="p-2 text-white">Rename</Text>
               </MenuOption>
               <MenuOption

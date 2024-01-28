@@ -13,6 +13,7 @@ import { useRouter } from "expo-router";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addTemplate,
+  editTemplate,
   renameNewTemplate,
   resetNewTemplate,
 } from "../Redux/Actions/actions";
@@ -24,7 +25,6 @@ const data = exerciseData;
 const CreateTemplate = () => {
   const router = useRouter();
   const dispatch = useDispatch();
-
   const getExercise = (id: string) => {
     const exercise_array = data.filter((exercise: any) => {
       return exercise.id === id;
@@ -49,7 +49,11 @@ const CreateTemplate = () => {
         <View className="absolute  right-3 top-[18%]">
           <TouchableOpacity
             onPress={() => {
-              dispatch(addTemplate({ ...newTemplate, id: uuid.v4() }));
+              if (newTemplate.id === "") {
+                dispatch(addTemplate({ ...newTemplate, id: uuid.v4() }));
+              } else {
+                dispatch(editTemplate({ ...newTemplate }));
+              }
               dispatch(resetNewTemplate());
               router.back();
             }}

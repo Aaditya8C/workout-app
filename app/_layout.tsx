@@ -1,5 +1,5 @@
 import React from "react";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 import store, { persistor } from "../Redux/Store/store";
 import { Stack } from "expo-router";
 import { PersistGate } from "redux-persist/integration/react";
@@ -17,11 +17,14 @@ const RootLayout = () => {
           <Stack.Screen
             name="createTemplate"
             options={{
-              headerTitle: "Create New Template",
+              headerTitle: "Create Template",
             }}></Stack.Screen>
           <Stack.Screen
             name="addExercise"
-            options={{ headerTitle: "Add Exercises" }}></Stack.Screen>
+            options={{
+              headerTitle: "Add Exercises",
+              headerShown: false,
+            }}></Stack.Screen>
         </Stack>
       </PersistGate>
     </Provider>

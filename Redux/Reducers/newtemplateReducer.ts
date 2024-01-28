@@ -33,7 +33,7 @@ const newTemplateReducer  = (state = initialState, action:any) => {
             }
         case RESET_NEW_TEMPLATE:
             {
-                return {...state,templateName:"New Template",exercises:[]}
+                return {...state,templateName:"New Template",id:"",exercises:[]}
             }
         default:
             return state;

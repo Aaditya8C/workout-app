@@ -11,7 +11,7 @@ import {
   } from 'redux-persist';
 
 const persistConfig = {
-    key: 'rosdfsdfsdfdfdsfdft',
+    key: 'roshzdfs',
     storage: AsyncStorage,
   };
 

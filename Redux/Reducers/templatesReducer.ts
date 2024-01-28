@@ -25,8 +25,7 @@ const templatesReducer  = (state = initialState, action:any) => {
             {
             return state.map((item)=>{
                 if(item.id===action.template.id){
-                    item.exercises = action.template.exercises;
-                    item.templateName = action.template.templateName;
+                    return action.template;
                 }
                 return item;
             })
