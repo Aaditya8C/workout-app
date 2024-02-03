@@ -6,7 +6,36 @@ import { useRouter } from "expo-router";
 const TabsLayout = () => {
   const router = useRouter();
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarHideOnKeyboard: true,
+      }}>
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          headerShown: false,
+          tabBarIcon: ({ color, focused }) => {
+            return (
+              <Text className={focused ? "text-violet-600" : "text-gray-500"}>
+                <Icon name="home-outline" size={30}></Icon>
+              </Text>
+            );
+          },
+        }}></Tabs.Screen>
+      <Tabs.Screen
+        name="templates"
+        options={{
+          title: "Templates",
+          headerShown: false,
+          tabBarIcon: ({ color, focused }) => {
+            return (
+              <Text className={focused ? "text-violet-600" : "text-gray-500"}>
+                <Icon name="bookmarks-outline" size={30}></Icon>
+              </Text>
+            );
+          },
+        }}></Tabs.Screen>
       <Tabs.Screen
         name="profile"
         options={{
@@ -20,19 +49,7 @@ const TabsLayout = () => {
             );
           },
         }}></Tabs.Screen>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Templates",
-          headerShown: false,
-          tabBarIcon: ({ color, focused }) => {
-            return (
-              <Text className={focused ? "text-violet-600" : "text-gray-500"}>
-                <Icon name="bookmarks-outline" size={30}></Icon>
-              </Text>
-            );
-          },
-        }}></Tabs.Screen>
+
       <Tabs.Screen
         options={{
           headerShown: false,

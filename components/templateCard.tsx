@@ -26,14 +26,12 @@ const TemplateCard = ({ template }: any) => {
     return exercise_array[0];
   };
   return (
-    <View className="border self-center w-[95%] border-gray-300 p-2 rounded-md">
+    <View className="border self-center w-[95%] border-gray-300 p-3 rounded-md">
       <View className="flex flex-row justify-between items-center">
         <Text className="text-lg font-semibold">{template.templateName}</Text>
         <Menu>
           <MenuTrigger>
-            <Text className="">
-              <Icon name="ellipsis-vertical" size={20} />
-            </Text>
+            <Icon name="ellipsis-vertical" size={20} />
           </MenuTrigger>
           <MenuOptions>
             <View className="bg-slate-800 p-2 rounded-xl">
@@ -62,18 +60,20 @@ const TemplateCard = ({ template }: any) => {
         </Menu>
       </View>
       <View>
-        <FlatList
-          data={template.exercises}
-          keyExtractor={(item) => item}
-          renderItem={({ item }) => {
-            const ex = getExercise(item);
-            return (
-              ex && (
-                <Text className="text-gray-500 ">{`3 X ${ex.name} (${ex.equipment}) - ${ex.bodyPart}`}</Text>
-              )
-            );
-          }}
-        />
+        <View className="mt-2">
+          <FlatList
+            data={template.exercises}
+            keyExtractor={(item) => item}
+            renderItem={({ item }) => {
+              const ex = getExercise(item);
+              return (
+                ex && (
+                  <Text className="text-gray-500 ">{`1 x ${ex.name} (${ex.bodyPart})`}</Text>
+                )
+              );
+            }}
+          />
+        </View>
       </View>
     </View>
   );

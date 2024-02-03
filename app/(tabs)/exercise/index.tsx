@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo, useEffect } from "react";
 import {
   StyleSheet,
   FlatList,
@@ -8,15 +8,62 @@ import {
   Image,
 } from "react-native";
 import exerciseData from "../../../constants/exercise_data";
-import { icons, getIcon } from "../../../constants/icon_mapping";
+import Icon from "react-native-vector-icons/Ionicons";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { TextInput } from "react-native";
+import { Pressable } from "react-native";
 import { Link } from "expo-router";
+import { getIcon } from "../../../constants/icon_mapping";
+import { useRouter } from "expo-router";
 
-const data = exerciseData;
 const Exercise = () => {
+  const router = useRouter();
+  const [searchText, setSearchText] = useState("");
+  const [filteredData, setFilteredData] = useState(exerciseData);
+
+  useEffect(() => {
+    setFilteredData(
+      exerciseData.filter((item) => {
+        if (searchText === "") {
+          return true;
+        }
+        return (
+          item.name.includes(searchText.toLowerCase()) ||
+          item.bodyPart.includes(searchText.toLowerCase())
+        );
+      })
+    );
+  }, [searchText]);
   return (
-    <View>
+    <SafeAreaView className="bg-white">
+      <View className="flex flex-row justify-around items-center p-2 relative">
+        <Pressable
+          onPress={() => {
+            router.replace("/");
+          }}>
+          <Icon name="arrow-back" size={30}></Icon>
+        </Pressable>
+        <TextInput
+          autoFocus={true}
+          className="px-4 py-2 bg-slate-200 w-[70%] text-lg rounded-lg text-gray-600"
+          onChangeText={(text) => {
+            setSearchText(text);
+          }}
+          value={searchText}></TextInput>
+        {searchText !== "" && (
+          <Pressable
+            className="absolute right-10"
+            onPress={() => {
+              setSearchText("");
+            }}>
+            <Text className=" text-gray-400">
+              <Icon name="close-outline" size={30}></Icon>
+            </Text>
+          </Pressable>
+        )}
+      </View>
       <FlatList
-        data={data}
+        data={filteredData}
         renderItem={({ item }) => {
           return (
             <View>
@@ -32,7 +79,10 @@ const Exercise = () => {
                   </View>
                   <View className="flex justify-center">
                     <Text>
-                      {item.name} ({item.equipment})
+                      <Text className=" font-semibold capitalize">
+                        {item.name}
+                      </Text>
+                      <Text>({item.equipment})</Text>
                     </Text>
                     <Text className=" text-gray-400">{item.bodyPart}</Text>
                   </View>
@@ -44,7 +94,7 @@ const Exercise = () => {
         keyExtractor={(item) => item.id}
         ListHeaderComponent={() => <View className="py-2"></View>}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 

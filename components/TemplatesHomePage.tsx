@@ -7,6 +7,7 @@ import {
   Pressable,
   ScrollView,
   FlatList,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -22,22 +23,31 @@ const TemplatesHomePage = () => {
     return state.templates;
   });
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView className="flex-1 px-1 bg-white">
       <View className="flex-1 flex flex-col gap-2">
-        <View className="flex flex-row justify-center items-center gap-1">
-          <Text className="">
-            <Icon name="barbell" size={30} />
-          </Text>
-
-          <Text className="text-2xl text-violet-600 font-bold">कसरत</Text>
+        <View className="pt-2 flex flex-row  justify-center  items-center">
+          <View className="flex flex-row items-center rounded-lg  p-1">
+            <Image
+              className="w-10 h-10"
+              source={require("../assets/images/stretchlogo.png")}></Image>
+            <Text className="font-bold tracking-wider text-black text-2xl">
+              STRETCH
+            </Text>
+          </View>
         </View>
         <View className="w-[90%] self-center">
-          <Button
+          <Pressable
+            className="rounded-lg bg-violet-100 p-3 items-center flex flex-row justify-center"
+            style={{ elevation: 5 }}
             onPress={() => {
               router.push("/createTemplate");
-            }}
-            title="Add Template +"
-            color={"#9747ff"}></Button>
+            }}>
+            <Text className="text-violet-600  font-bold text-sm">
+              ADD TEMPLATE{" "}
+            </Text>
+
+            <Icon name="add" size={23}></Icon>
+          </Pressable>
         </View>
         <View>
           <Text className="pl-4 tracking-widest text-gray-400">
@@ -51,7 +61,7 @@ const TemplatesHomePage = () => {
               return <TemplateCard template={item} />;
             }}
             keyExtractor={(item) => item.id}
-            ItemSeparatorComponent={() => <View className="p-1"></View>}
+            ItemSeparatorComponent={() => <View className="m-2"></View>}
           />
         </MenuProvider>
       </View>

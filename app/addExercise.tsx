@@ -1,4 +1,4 @@
-import React, { useState, memo } from "react";
+import React, { useState, memo, useEffect } from "react";
 import {
   StyleSheet,
   FlatList,
@@ -43,6 +43,21 @@ const AddExercisePage = () => {
   };
   const [searchText, setSearchText] = useState("");
   const [filteredData, setFilteredData] = useState(exerciseData);
+
+  useEffect(() => {
+    setFilteredData(
+      exerciseData.filter((item) => {
+        if (searchText === "") {
+          return true;
+        }
+        return (
+          item.name.includes(searchText.toLowerCase()) ||
+          item.bodyPart.includes(searchText.toLowerCase())
+        );
+      })
+    );
+  }, [searchText]);
+
   return (
     <SafeAreaView className="relative flex-1 bg-white">
       <View className="flex flex-row justify-around items-center p-2 relative">
@@ -56,23 +71,20 @@ const AddExercisePage = () => {
           className="px-4 py-2 bg-slate-200 w-[70%] text-lg rounded-lg text-gray-600"
           onChangeText={(text) => {
             setSearchText(text);
-            setFilteredData(
-              exerciseData.filter((item) => {
-                if (searchText === "") {
-                  return true;
-                }
-                return (
-                  item.name.includes(searchText.toLowerCase()) ||
-                  item.bodyPart.includes(searchText.toLowerCase())
-                );
-              })
-            );
           }}
           value={searchText}
           autoFocus></TextInput>
-        <Text className="absolute right-10 text-gray-400">
-          <Icon name="close-outline" size={25}></Icon>
-        </Text>
+        {searchText !== "" && (
+          <Pressable
+            className="absolute right-10"
+            onPress={() => {
+              setSearchText("");
+            }}>
+            <Text className=" text-gray-400">
+              <Icon name="close-outline" size={30}></Icon>
+            </Text>
+          </Pressable>
+        )}
       </View>
       <View>
         <FlatList

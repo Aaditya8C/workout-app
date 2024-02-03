@@ -39,7 +39,7 @@ const CreateTemplate = () => {
     <View className="flex-1 flex bg-white">
       <View className="relative">
         <TextInput
-          className="p-2 border-2 border-violet-400 my-1 text-lg font-semibold"
+          className="p-2 border-2 border-violet-400  my-1 text-lg font-semibold"
           onChangeText={(text) => {
             dispatch(renameNewTemplate(text));
           }}
