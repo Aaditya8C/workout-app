@@ -1,6 +1,6 @@
 React Native based Android/IOS app developed for local gym client. This workout tracking app is designed to help you stay motivated and on track, all while providing you information along with on-device notifications.
 
-# App glimpses in Android -
+# React Native App glimpses in Android -
 <img width="203" alt="image" src="https://github.com/nikhilnagargit/workout-app/assets/44896376/9fb7eae8-3f80-4ff8-8786-a508f2dc218c">"  "
 <img width="203" alt="image" src="https://github.com/nikhilnagargit/workout-app/assets/44896376/9c535f78-8eaf-4cfb-a667-4a1f96f9077d">"  "
 <img width="203" alt="image" src="https://github.com/nikhilnagargit/workout-app/assets/44896376/0893fcb3-e6f8-458a-a2d1-1870ff4dc2ff">"  "
