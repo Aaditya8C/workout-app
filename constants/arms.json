@@ -1,4 +1,4 @@
-"arms":[
+"arms": [
   {
     "bodyPart": "lower arms",
     "equipment": "band",
@@ -6,7 +6,9 @@
     "id": "0994",
     "name": "band reverse wrist curl",
     "target": "forearms",
-    "secondaryMuscles": ["forearms"],
+    "secondaryMuscles": [
+      "forearms"
+    ],
     "instructions": [
       "Sit on a bench or chair with your feet flat on the ground.",
       "Hold the band with an overhand grip, palms facing down, and wrap it around your fingers.",
@@ -23,7 +25,10 @@
     "id": "1016",
     "name": "band wrist curl",
     "target": "forearms",
-    "secondaryMuscles": ["biceps", "triceps"],
+    "secondaryMuscles": [
+      "biceps",
+      "triceps"
+    ],
     "instructions": [
       "Sit on a bench or chair with your feet flat on the ground.",
       "Hold the band with both hands, palms facing up, and rest your forearms on your thighs.",
@@ -39,7 +44,10 @@
     "id": "1411",
     "name": "barbell palms down wrist curl over a bench",
     "target": "forearms",
-    "secondaryMuscles": ["biceps", "brachialis"],
+    "secondaryMuscles": [
+      "biceps",
+      "brachialis"
+    ],
     "instructions": [
       "Sit on a bench with your feet flat on the ground and your forearms resting on your thighs, palms facing down.",
       "Hold a barbell with an overhand grip, hands shoulder-width apart.",
@@ -55,7 +63,10 @@
     "id": "1412",
     "name": "barbell palms up wrist curl over a bench",
     "target": "forearms",
-    "secondaryMuscles": ["biceps", "shoulders"],
+    "secondaryMuscles": [
+      "biceps",
+      "shoulders"
+    ],
     "instructions": [
       "Sit on a bench with your feet flat on the ground and hold a barbell with an underhand grip, palms facing up.",
       "Rest your forearms on the bench, allowing your wrists to hang off the edge.",
@@ -71,7 +82,10 @@
     "id": "0079",
     "name": "barbell revers wrist curl v. 2",
     "target": "forearms",
-    "secondaryMuscles": ["biceps", "brachialis"],
+    "secondaryMuscles": [
+      "biceps",
+      "brachialis"
+    ],
     "instructions": [
       "Sit on a bench with your feet flat on the ground and your knees bent.",
       "Hold a barbell with an overhand grip, palms facing down, and your hands shoulder-width apart.",
@@ -81,7 +95,6 @@
       "Repeat for the desired number of repetitions."
     ]
   },
-
   {
     "bodyPart": "upper arms",
     "equipment": "assisted",
@@ -89,7 +102,9 @@
     "id": "0018",
     "name": "assisted standing triceps extension (with towel)",
     "target": "triceps",
-    "secondaryMuscles": ["shoulders"],
+    "secondaryMuscles": [
+      "shoulders"
+    ],
     "instructions": [
       "Stand with your feet shoulder-width apart and hold a towel with both hands behind your head.",
       "Keep your elbows close to your ears and your upper arms stationary.",
@@ -105,7 +120,10 @@
     "id": "0019",
     "name": "assisted triceps dip (kneeling)",
     "target": "triceps",
-    "secondaryMuscles": ["chest", "shoulders"],
+    "secondaryMuscles": [
+      "chest",
+      "shoulders"
+    ],
     "instructions": [
       "Adjust the machine to your desired weight and height.",
       "Kneel down on the pad facing the machine, with your hands gripping the handles.",
@@ -121,7 +139,9 @@
     "id": "0968",
     "name": "band alternating biceps curl",
     "target": "biceps",
-    "secondaryMuscles": ["forearms"],
+    "secondaryMuscles": [
+      "forearms"
+    ],
     "instructions": [
       "Stand with your feet shoulder-width apart and hold the band with an underhand grip, palms facing up.",
       "Keep your elbows close to your sides and slowly curl one arm up towards your shoulder, squeezing your biceps at the top.",
@@ -136,7 +156,10 @@
     "id": "0975",
     "name": "band close-grip push-up",
     "target": "triceps",
-    "secondaryMuscles": ["chest", "shoulders"],
+    "secondaryMuscles": [
+      "chest",
+      "shoulders"
+    ],
     "instructions": [
       "Place a band around your upper arms, just above the elbows.",
       "Assume a push-up position with your hands directly under your shoulders and your body in a straight line from head to heels.",
@@ -152,7 +175,9 @@
     "id": "0976",
     "name": "band concentration curl",
     "target": "biceps",
-    "secondaryMuscles": ["forearms"],
+    "secondaryMuscles": [
+      "forearms"
+    ],
     "instructions": [
       "Sit on a bench or chair with your legs spread apart and your feet flat on the ground.",
       "Hold one end of the band in your hand and step on the other end with your foot on the same side.",
