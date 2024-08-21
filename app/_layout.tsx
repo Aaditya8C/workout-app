@@ -13,18 +13,21 @@ const RootLayout = () => {
             name="(tabs)"
             options={{
               headerShown: false,
-            }}></Stack.Screen>
+            }}
+          ></Stack.Screen>
           <Stack.Screen
             name="createTemplate"
             options={{
               headerTitle: "Create Template",
-            }}></Stack.Screen>
+            }}
+          ></Stack.Screen>
           <Stack.Screen
             name="addExercise"
             options={{
               headerTitle: "Add Exercises",
               headerShown: false,
-            }}></Stack.Screen>
+            }}
+          ></Stack.Screen>
         </Stack>
       </PersistGate>
     </Provider>
