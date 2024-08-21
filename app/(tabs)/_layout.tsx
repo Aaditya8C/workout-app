@@ -9,7 +9,8 @@ const TabsLayout = () => {
     <Tabs
       screenOptions={{
         tabBarHideOnKeyboard: true,
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
@@ -22,7 +23,8 @@ const TabsLayout = () => {
               </Text>
             );
           },
-        }}></Tabs.Screen>
+        }}
+      ></Tabs.Screen>
       <Tabs.Screen
         name="templates"
         options={{
@@ -35,7 +37,8 @@ const TabsLayout = () => {
               </Text>
             );
           },
-        }}></Tabs.Screen>
+        }}
+      ></Tabs.Screen>
       <Tabs.Screen
         name="profile"
         options={{
@@ -48,7 +51,8 @@ const TabsLayout = () => {
               </Text>
             );
           },
-        }}></Tabs.Screen>
+        }}
+      ></Tabs.Screen>
 
       <Tabs.Screen
         options={{
@@ -62,7 +66,8 @@ const TabsLayout = () => {
             );
           },
         }}
-        name="exercise"></Tabs.Screen>
+        name="exercise"
+      ></Tabs.Screen>
     </Tabs>
   );
 };

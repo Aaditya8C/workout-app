@@ -35,12 +35,13 @@ const Exercise = () => {
     );
   }, [searchText]);
   return (
-    <SafeAreaView className="bg-white">
+    <SafeAreaView className="bg-cyan-800">
       <View className="flex flex-row justify-around items-center p-2 relative">
         <Pressable
           onPress={() => {
             router.replace("/");
-          }}>
+          }}
+        >
           <Icon name="arrow-back" size={30}></Icon>
         </Pressable>
         <TextInput
@@ -49,13 +50,15 @@ const Exercise = () => {
           onChangeText={(text) => {
             setSearchText(text);
           }}
-          value={searchText}></TextInput>
+          value={searchText}
+        ></TextInput>
         {searchText !== "" && (
           <Pressable
             className="absolute right-10"
             onPress={() => {
               setSearchText("");
-            }}>
+            }}
+          >
             <Text className=" text-gray-400">
               <Icon name="close-outline" size={30}></Icon>
             </Text>
