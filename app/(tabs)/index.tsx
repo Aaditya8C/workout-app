@@ -35,7 +35,7 @@ const Index = () => {
       </View>
       <View className="flex flex-row flex-wrap justify-center  px-5 gap-6">
         <Pressable
-          className="w-[40%] bg-orange-200 rounded-xl flex items-center p-3"
+          className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
           style={{ elevation: 5 }}
           onPress={() => {
             router.replace("/profile");
@@ -49,7 +49,7 @@ const Index = () => {
         </Pressable>
 
         <Pressable
-          className="w-[40%] bg-orange-200 rounded-xl flex items-center p-3"
+          className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
           onPress={() => {
             router.replace("/profile");
           }}
@@ -62,7 +62,7 @@ const Index = () => {
           <Text className="text-sm font-bold p-1">Chat with AI</Text>
         </Pressable>
         <Pressable
-          className="w-[40%] bg-orange-200 rounded-xl flex items-center p-3"
+          className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
           style={{ elevation: 5 }}
           onPress={() => {
             router.replace("/templates");
@@ -75,7 +75,7 @@ const Index = () => {
           <Text className="text-sm font-bold p-1">Workout Plan</Text>
         </Pressable>
         <Pressable
-          className="w-[40%] bg-orange-200 rounded-xl flex items-center p-3"
+          className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
           style={{ elevation: 5 }}
           onPress={() => {
             router.replace("/exercise/");

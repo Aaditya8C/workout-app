@@ -69,7 +69,7 @@ const Exercise = () => {
         data={filteredData}
         renderItem={({ item }) => {
           return (
-            <View>
+            <View className="bg-cyan-900">
               <Link href={`/exercise/${item.id}`}>
                 <View className="flex flex-row space-x-3  px-3 py-2">
                   <View className="h-12 w-12">
@@ -82,10 +82,10 @@ const Exercise = () => {
                   </View>
                   <View className="flex justify-center">
                     <Text>
-                      <Text className=" font-semibold capitalize">
+                      <Text className=" font-semibold capitalize text-white">
                         {item.name}
                       </Text>
-                      <Text>({item.equipment})</Text>
+                      <Text className="text-white">({item.equipment})</Text>
                     </Text>
                     <Text className=" text-gray-400">{item.bodyPart}</Text>
                   </View>

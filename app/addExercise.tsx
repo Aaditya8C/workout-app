@@ -59,12 +59,13 @@ const AddExercisePage = () => {
   }, [searchText]);
 
   return (
-    <SafeAreaView className="relative flex-1 bg-white">
+    <SafeAreaView className="relative flex-1 bg-cyan-900">
       <View className="flex flex-row justify-around items-center p-2 relative">
         <Pressable
           onPress={() => {
             router.back();
-          }}>
+          }}
+        >
           <Icon name="arrow-back" size={30}></Icon>
         </Pressable>
         <TextInput
@@ -73,13 +74,15 @@ const AddExercisePage = () => {
             setSearchText(text);
           }}
           value={searchText}
-          autoFocus></TextInput>
+          autoFocus
+        ></TextInput>
         {searchText !== "" && (
           <Pressable
             className="absolute right-10"
             onPress={() => {
               setSearchText("");
-            }}>
+            }}
+          >
             <Text className=" text-gray-400">
               <Icon name="close-outline" size={30}></Icon>
             </Text>
@@ -95,9 +98,8 @@ const AddExercisePage = () => {
                 item={item}
                 handleDeselect={handleDeselect}
                 handleSelect={handleSelect}
-                isSelected={localCopyExercises.includes(
-                  item.id
-                )}></ExerciseCard>
+                isSelected={localCopyExercises.includes(item.id)}
+              ></ExerciseCard>
             );
           }}
           keyExtractor={(item) => item.id}
@@ -109,8 +111,9 @@ const AddExercisePage = () => {
           <TouchableOpacity
             onPress={() => {
               handleCheckPress();
-            }}>
-            <Icon name="checkmark-circle" color={"#9747ff"} size={70} />
+            }}
+          >
+            <Icon name="checkmark-circle" color={"#06b6d4"} size={70} />
           </TouchableOpacity>
         </View>
       )}

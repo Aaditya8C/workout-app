@@ -9,7 +9,8 @@ const ExerciseCard = memo(
       <TouchableOpacity
         onPress={() => {
           isSelected ? handleDeselect(item.id) : handleSelect(item.id);
-        }}>
+        }}
+      >
         <View className="flex flex-row space-x-3  px-3 py-2">
           <View className="h-12 w-12">
             <View className="rounded-full border border-violet-300">
@@ -26,10 +27,10 @@ const ExerciseCard = memo(
             </View>
           </View>
           <View className="flex justify-center">
-            <Text>
+            <Text className="text-white">
               {item.name} ({item.equipment})
             </Text>
-            <Text className=" text-gray-400">{item.bodyPart}</Text>
+            <Text className=" text-white">{item.bodyPart}</Text>
           </View>
         </View>
       </TouchableOpacity>

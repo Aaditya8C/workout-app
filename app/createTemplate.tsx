@@ -36,10 +36,10 @@ const CreateTemplate = () => {
   });
 
   return (
-    <View className="flex-1 flex bg-white">
+    <View className="flex-1 flex bg-cyan-900">
       <View className="relative">
         <TextInput
-          className="p-2 border-2 border-violet-400  my-1 text-lg font-semibold"
+          className="py-4 px-2 border-2 border-cyan-500  my-1 text-lg font-semibold text-white"
           onChangeText={(text) => {
             dispatch(renameNewTemplate(text));
           }}
@@ -57,7 +57,8 @@ const CreateTemplate = () => {
               dispatch(resetNewTemplate());
               router.back();
             }}
-            className="bg-[#9747ff] rounded-lg flex flex-row items-center p-1">
+            className="bg-cyan-500 rounded-lg flex flex-row items-center p-2"
+          >
             <Text className="text-white">
               <Icon name="save-outline" size={25} />
             </Text>
@@ -70,8 +71,9 @@ const CreateTemplate = () => {
           router.push({
             pathname: "/addExercise",
           });
-        }}>
-        <Text className=" text-blue-400 text-lg font-semibold self-center pt-3">
+        }}
+      >
+        <Text className=" text-cyan-300 text-lg font-semibold self-center pt-3">
           ADD EXERCISE
         </Text>
       </Pressable>
