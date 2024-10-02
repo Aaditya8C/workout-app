@@ -37,21 +37,21 @@ const Index = () => {
         <Pressable
           className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
           style={{ elevation: 5 }}
-          onPress={() => {
-            router.replace("/profile");
-          }}
+          // onPress={() => {
+          //   router.replace("/ayurveda");
+          // }}
         >
           <Image
             className="w-20 h-20"
             source={require("../../assets/images/profile.png")}
           ></Image>
-          <Text className="text-sm font-bold p-1">Profile</Text>
+          <Text className="text-sm font-bold p-1">AyurVeda</Text>
         </Pressable>
 
         <Pressable
           className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
           onPress={() => {
-            router.replace("/profile");
+            router.replace("/aichat");
           }}
           style={{ elevation: 5 }}
         >
