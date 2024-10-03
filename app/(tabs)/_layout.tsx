@@ -24,6 +24,11 @@ const tabs = [
     title: "Exercise",
     icon: "barbell-outline",
   },
+  {
+    name: "aichat",
+    title: "AI",
+    icon: "barbell-outline",
+  },
 ];
 
 const TabsLayout = () => {
