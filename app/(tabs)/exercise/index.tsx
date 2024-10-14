@@ -36,17 +36,20 @@ const Exercise = () => {
   }, [searchText]);
   return (
     <SafeAreaView className="bg-cyan-800">
-      <View className="flex flex-row justify-around items-center p-2 relative">
+      <View className="flex flex-row justify-between items-center p-2 relative">
         <Pressable
           onPress={() => {
             router.replace("/");
           }}
         >
-          <Icon name="arrow-back" size={30}></Icon>
+          <Text className="text-cyan-300">
+            <Icon name="arrow-back" size={30}></Icon>
+          </Text>
         </Pressable>
         <TextInput
           autoFocus={true}
-          className="px-4 py-2 bg-slate-200 w-[70%] text-lg rounded-lg text-gray-600"
+          placeholder="Search exercise..."
+          className="px-4 py-2 bg-slate-200 w-[85%] text-lg rounded-lg text-gray-600 placeholder:text-sm"
           onChangeText={(text) => {
             setSearchText(text);
           }}
@@ -54,12 +57,12 @@ const Exercise = () => {
         ></TextInput>
         {searchText !== "" && (
           <Pressable
-            className="absolute right-10"
+            className="absolute right-6"
             onPress={() => {
               setSearchText("");
             }}
           >
-            <Text className=" text-gray-400">
+            <Text>
               <Icon name="close-outline" size={30}></Icon>
             </Text>
           </Pressable>
@@ -87,7 +90,7 @@ const Exercise = () => {
                       </Text>
                       <Text className="text-white">({item.equipment})</Text>
                     </Text>
-                    <Text className=" text-gray-400">{item.bodyPart}</Text>
+                    <Text className=" text-white">{item.bodyPart}</Text>
                   </View>
                 </View>
               </Link>

@@ -17,13 +17,15 @@ const Page = () => {
     <Stack>
       <Stack.Screen
         name="index"
-        options={{ headerShown: false }}></Stack.Screen>
+        options={{ headerShown: false }}
+      ></Stack.Screen>
       <Stack.Screen
         name="[exerciseId]"
         options={{
           presentation: "modal",
           headerTitle: "Workout Details",
-        }}></Stack.Screen>
+        }}
+      ></Stack.Screen>
     </Stack>
   );
 };

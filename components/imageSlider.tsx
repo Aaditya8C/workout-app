@@ -6,10 +6,11 @@ import { Dimensions } from "react-native";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 const sliderImages: any = [
-  require("../assets/images/slide1.png"),
   require("../assets/images/slide2.png"),
+  require("../assets/images/slide6.png"),
   require("../assets/images/slide3.png"),
   require("../assets/images/slide4.png"),
+  require("../assets/images/slide7.png"),
 ];
 
 const ImageSlider = () => {
@@ -24,7 +25,8 @@ const ImageSlider = () => {
       firstItem={1}
       itemWidth={windowWidth - 70}
       autoplayInterval={3000}
-      slideStyle={{ display: "flex", alignItems: "center" }}></Carousel>
+      slideStyle={{ display: "flex", alignItems: "center" }}
+    ></Carousel>
   );
 };
 
@@ -36,7 +38,8 @@ const ItemCard = ({ item, index }: any, parallaxProps: any) => {
         containerStyle={{ borderRadius: 30, flex: 1 }}
         style={{ resizeMode: "contain" }}
         parallaxFactor={1}
-        {...parallaxProps}></ParallaxImage>
+        {...parallaxProps}
+      ></ParallaxImage>
     </View>
   );
 };

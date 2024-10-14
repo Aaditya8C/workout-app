@@ -9,7 +9,6 @@ const AiComp = () => {
   const [recommendations, setRecommendations] = useState<
     { heading: string; improvements: string[] }[]
   >([]);
-  const [feedback, setFeedback] = useState("");
 
   const currentPlan = useSelector((state: any) => state.templates);
 
@@ -43,7 +42,6 @@ const AiComp = () => {
           convertPlanToString(currentPlan) +
           "\nthese are my weekly exercise plan suggest me to improvements over it only give improvements no other text. Format should be like heading of the template and improvements as description.";
 
-        console.log(detailedPlan);
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
         const result = await model.generateContent(detailedPlan);
         const response = await result.response.text();

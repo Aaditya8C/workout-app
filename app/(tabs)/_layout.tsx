@@ -27,7 +27,7 @@ const tabs = [
   {
     name: "aichat",
     title: "AI",
-    icon: "barbell-outline",
+    icon: "logo-apple-ar",
   },
 ];
 
@@ -37,9 +37,9 @@ const TabsLayout = () => {
       screenOptions={{
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
-          backgroundColor: "#0891b2", // Background color of the tab bar
-          paddingVertical: 10, // Vertical padding for the entire footer (tab bar)
-          height: 60, // Adjust the height if needed
+          backgroundColor: "#0891b2",
+          paddingVertical: 10,
+          height: 60,
         },
         tabBarActiveTintColor: "#fff3b0", // Active tab icon color
         tabBarInactiveTintColor: "#000000", // Inactive tab icon color

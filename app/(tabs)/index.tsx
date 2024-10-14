@@ -42,10 +42,10 @@ const Index = () => {
           // }}
         >
           <Image
-            className="w-20 h-20"
-            source={require("../../assets/images/profile.png")}
+            className="w-20 h-20 rounded-full"
+            source={require("../../assets/images/ayurveda.png")}
           ></Image>
-          <Text className="text-sm font-bold p-1">AyurVeda</Text>
+          <Text className="text-sm font-bold p-1">Ayurveda</Text>
         </Pressable>
 
         <Pressable

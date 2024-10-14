@@ -66,10 +66,13 @@ const AddExercisePage = () => {
             router.back();
           }}
         >
-          <Icon name="arrow-back" size={30}></Icon>
+          <Text className="text-cyan-300">
+            <Icon name="arrow-back" size={30}></Icon>
+          </Text>
         </Pressable>
         <TextInput
-          className="px-4 py-2 bg-slate-200 w-[70%] text-lg rounded-lg text-gray-600"
+          placeholder="Search Exercise..."
+          className="px-4 py-2 bg-slate-200 w-[85%] text-lg rounded-lg text-gray-600 placeholder:text-sm"
           onChangeText={(text) => {
             setSearchText(text);
           }}
@@ -78,13 +81,13 @@ const AddExercisePage = () => {
         ></TextInput>
         {searchText !== "" && (
           <Pressable
-            className="absolute right-10"
+            className="absolute right-6"
             onPress={() => {
               setSearchText("");
             }}
           >
-            <Text className=" text-gray-400">
-              <Icon name="close-outline" size={30}></Icon>
+            <Text>
+              <Icon name="close-outline" size={30} color="black"></Icon>
             </Text>
           </Pressable>
         )}
