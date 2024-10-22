@@ -37,9 +37,9 @@ const Index = () => {
         <Pressable
           className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
           style={{ elevation: 5 }}
-          // onPress={() => {
-          //   router.replace("/ayurveda");
-          // }}
+          onPress={() => {
+            router.replace("/ayurveda/");
+          }}
         >
           <Image
             className="w-20 h-20 rounded-full"
@@ -51,7 +51,7 @@ const Index = () => {
         <Pressable
           className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
           onPress={() => {
-            router.replace("/aichat");
+            router.replace("/airecommendations");
           }}
           style={{ elevation: 5 }}
         >

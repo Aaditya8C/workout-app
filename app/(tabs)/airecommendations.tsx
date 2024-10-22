@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import AiRecommendations from "@/components/AiRecommendations";
+import AiComp from "@/components/AiComp";
 
-const AiChat = () => {
+const AiRecommendations = () => {
   return (
     <View>
       <StatusBar
@@ -11,9 +11,9 @@ const AiChat = () => {
         backgroundColor="white"
         barStyle={"dark-content"}
       />
-      <AiRecommendations />
+      <AiComp />
     </View>
   );
 };
 
-export default AiChat;
+export default AiRecommendations;

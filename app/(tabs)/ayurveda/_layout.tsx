@@ -11,7 +11,7 @@ const Page = () => {
         options={{ headerShown: false }}
       ></Stack.Screen>
       <Stack.Screen
-        name="[exerciseId]"
+        name="[ayurId]"
         options={{
           presentation: "modal",
           headerTitle: "Workout Details",

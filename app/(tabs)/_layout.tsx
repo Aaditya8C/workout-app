@@ -25,7 +25,7 @@ const tabs = [
     icon: "barbell-outline",
   },
   {
-    name: "aichat",
+    name: "airecommendations",
     title: "AI",
     icon: "logo-apple-ar",
   },
