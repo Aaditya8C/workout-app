@@ -8,7 +8,12 @@ const RootLayout = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={<Text>Loading...</Text>}>
-        <Stack>
+        <Stack initialRouteName="LoginScreen">
+          <Stack.Screen name="LoginScreen" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="RegisterScreen"
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="(tabs)"
             options={{

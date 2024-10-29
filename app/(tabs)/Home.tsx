@@ -1,15 +1,13 @@
 import { View, Text, Image, StyleSheet, Pressable } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StatusBar } from "expo-status-bar";
 
-import Ionicons from "react-native-vector-icons/Ionicons";
 import ImageSlider from "../../components/imageSlider";
 import { Link, useRouter } from "expo-router";
 // import ImageSlider from '../components/ImageSlider';
 // import BodyParts from '../components/BodyParts';
 
-const Index = () => {
+const Home = () => {
   const router = useRouter();
   return (
     <SafeAreaView className="flex-1 bg-cyan-900 flex space-y-3" edges={["top"]}>
@@ -92,4 +90,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;
