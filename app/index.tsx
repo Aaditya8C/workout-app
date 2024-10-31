@@ -11,13 +11,13 @@ type RootStackParamList = {
 type LoginNavigationProps = {
   navigation: NavigationProp<RootStackParamList>;
 };
-const LoginScreen: React.FC<LoginNavigationProps> = ({ navigation }) => {
+const Index: React.FC<LoginNavigationProps> = ({ navigation }) => {
   return (
-    <SafeAreaView className="bg-black h-full w-full px-4 py-10">
+    <SafeAreaView className="h-full bg-violet-100 w-full px-4 py-10">
       <View className="flex gap-2 justify-center items-center mt-20">
         <Image
-          source={require("../assets/images/ai.png")}
-          className="w-24 h-24"
+          source={require("../assets/images/logo.png")}
+          className="w-40 h-40"
         />
         <Login navigation={navigation} />
       </View>
@@ -25,4 +25,4 @@ const LoginScreen: React.FC<LoginNavigationProps> = ({ navigation }) => {
   );
 };
 
-export default LoginScreen;
+export default Index;

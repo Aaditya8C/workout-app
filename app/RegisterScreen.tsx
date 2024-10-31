@@ -13,11 +13,11 @@ type RegisterNavigationProps = {
 };
 const RegisterScreen: React.FC<RegisterNavigationProps> = ({ navigation }) => {
   return (
-    <SafeAreaView className="bg-black h-full w-full px-4 py-10">
+    <SafeAreaView className="bg-violet-100 h-full w-full px-4 py-10">
       <View className="flex gap-2 justify-center items-center mt-20">
         <Image
-          source={require("../assets/images/ai.png")}
-          className="w-24 h-24"
+          source={require("../assets/images/logo.png")}
+          className="w-40 h-40"
         />
         <Register navigation={navigation} />
       </View>

@@ -7,7 +7,7 @@ import { Link, useRouter } from "expo-router";
 // import ImageSlider from '../components/ImageSlider';
 // import BodyParts from '../components/BodyParts';
 
-const Home = () => {
+const Index = () => {
   const router = useRouter();
   return (
     <SafeAreaView className="flex-1 bg-cyan-900 flex space-y-3" edges={["top"]}>
@@ -90,4 +90,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Index;
