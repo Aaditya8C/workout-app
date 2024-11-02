@@ -36,17 +36,17 @@ const CreateTemplate = () => {
   });
 
   return (
-    <View className="flex-1 flex bg-cyan-900">
+    <View className="flex-1 flex bg-violet-200">
       <View className="relative">
         <TextInput
-          className="py-4 px-2 border-2 border-cyan-500  my-1 text-lg font-semibold text-white"
+          className="py-4 px-2 border-2 border-violet-950  my-1 text-lg font-semibold"
           onChangeText={(text) => {
             dispatch(renameNewTemplate(text));
           }}
           value={newTemplate.templateName}
           autoFocus
         />
-        <View className="absolute  right-3 top-[18%]">
+        <View className="absolute  right-1 top-[25%]">
           <TouchableOpacity
             onPress={() => {
               if (newTemplate.id === "") {
@@ -57,7 +57,7 @@ const CreateTemplate = () => {
               dispatch(resetNewTemplate());
               router.back();
             }}
-            className="bg-cyan-500 rounded-lg flex flex-row items-center p-2"
+            className="bg-violet-950 rounded-lg flex flex-row items-center p-2 gap-2"
           >
             <Text className="text-white">
               <Icon name="save-outline" size={25} />
@@ -73,7 +73,7 @@ const CreateTemplate = () => {
           });
         }}
       >
-        <Text className=" text-cyan-300 text-lg font-semibold self-center pt-3">
+        <Text className=" text-violet-950 text-lg font-semibold self-center pt-3">
           ADD EXERCISE
         </Text>
       </Pressable>
@@ -83,7 +83,7 @@ const CreateTemplate = () => {
           renderItem={({ item }: any) => {
             const ex = getExercise(item);
             return (
-              <Text className="text-white ">{`3 X ${ex.name} (${ex.equipment}) - ${ex.bodyPart}`}</Text>
+              <Text className=" ">{`3 X ${ex.name} (${ex.equipment}) - ${ex.bodyPart}`}</Text>
             );
           }}
         />

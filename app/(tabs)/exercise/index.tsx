@@ -35,21 +35,21 @@ const Exercise = () => {
     );
   }, [searchText]);
   return (
-    <SafeAreaView className="bg-cyan-800">
+    <SafeAreaView className="bg-violet-200">
       <View className="flex flex-row justify-between items-center p-2 relative">
         <Pressable
           onPress={() => {
             router.replace("/");
           }}
         >
-          <Text className="text-cyan-300">
+          <Text className="text-violet-950">
             <Icon name="arrow-back" size={30}></Icon>
           </Text>
         </Pressable>
         <TextInput
           autoFocus={true}
           placeholder="Search exercise..."
-          className="px-4 py-2 bg-slate-200 w-[85%] text-lg rounded-lg text-gray-600 placeholder:text-sm"
+          className="px-4 py-2 bg-violet-50 w-[85%] text-lg rounded-lg text-gray-600 placeholder:text-sm"
           onChangeText={(text) => {
             setSearchText(text);
           }}
@@ -72,7 +72,7 @@ const Exercise = () => {
         data={filteredData}
         renderItem={({ item }) => {
           return (
-            <View className="bg-cyan-900">
+            <View className="bg-violet-200">
               <Link href={`/exercise/${item.id}`}>
                 <View className="flex flex-row space-x-3  px-3 py-2">
                   <View className="h-12 w-12">
@@ -85,12 +85,12 @@ const Exercise = () => {
                   </View>
                   <View className="flex justify-center">
                     <Text>
-                      <Text className=" font-semibold capitalize text-white">
+                      <Text className=" font-semibold capitalize">
                         {item.name}
                       </Text>
-                      <Text className="text-white">({item.equipment})</Text>
+                      <Text>({item.equipment})</Text>
                     </Text>
-                    <Text className=" text-white">{item.bodyPart}</Text>
+                    <Text>{item.bodyPart}</Text>
                   </View>
                 </View>
               </Link>

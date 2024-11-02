@@ -26,17 +26,15 @@ const TemplateCard = ({ template }: any) => {
     return exercise_array[0];
   };
   return (
-    <View className="border self-center w-[95%] border-gray-300 p-3 rounded-md">
+    <View className="border self-center w-[95%] border-violet-300 p-3 rounded-md">
       <View className="flex flex-row justify-between items-center">
-        <Text className="text-lg font-semibold text-white">
-          {template.templateName}
-        </Text>
+        <Text className="text-lg font-semibold ">{template.templateName}</Text>
         <Menu>
           <MenuTrigger>
-            <Icon name="ellipsis-vertical" size={20} color="white" />
+            <Icon name="ellipsis-vertical" size={20} color="black" />
           </MenuTrigger>
           <MenuOptions>
-            <View className="bg-cyan-700 p-2 rounded-xl">
+            <View className="bg-violet-950 p-2 rounded-xl">
               <MenuOption
                 onSelect={() => {
                   dispatch(setNewTemplate(template));
@@ -73,7 +71,7 @@ const TemplateCard = ({ template }: any) => {
               const ex = getExercise(item);
               return (
                 ex && (
-                  <Text className="text-white ">{`1 x ${ex.name} (${ex.bodyPart})`}</Text>
+                  <Text className="">{`1 x ${ex.name} (${ex.bodyPart})`}</Text>
                 )
               );
             }}

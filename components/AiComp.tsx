@@ -89,19 +89,17 @@ const AiComp = () => {
   }, [currentPlan]);
 
   return (
-    <View className="bg-cyan-900 h-screen w-screen relative p-4">
-      <Text className="text-white text-lg mt-10">
-        AI-Generated Recommendations
-      </Text>
+    <View className="bg-violet-200 h-screen w-screen relative p-4">
+      <Text className="text-lg mt-10">AI-Generated Recommendations</Text>
 
       {loading ? (
-        <Text className="text-white mt-4">Loading recommendations...</Text>
+        <Text className="mt-4">Loading recommendations...</Text>
       ) : (
         <ScrollView className="mt-4 mb-6">
           {recommendations.length > 0 ? (
             recommendations.map((rec, index) => (
-              <View key={index} className="bg-cyan-700 p-4 mb-2 rounded-lg">
-                <Text className="text-orange-100 font-bold text-xl">
+              <View key={index} className="bg-violet-950 p-4 mb-2 rounded-lg">
+                <Text className="text-orange-100 font-semibold text-lg">
                   {rec.heading}
                 </Text>
                 {rec.improvements.map((improvement, i) => (

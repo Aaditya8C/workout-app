@@ -37,7 +37,7 @@ const TabsLayout = () => {
       screenOptions={{
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
-          backgroundColor: "#0891b2",
+          backgroundColor: "#9B7EBD",
           paddingVertical: 10,
           height: 60,
         },

@@ -59,20 +59,20 @@ const AddExercisePage = () => {
   }, [searchText]);
 
   return (
-    <SafeAreaView className="relative flex-1 bg-cyan-900">
+    <SafeAreaView className="relative flex-1 bg-violet-200">
       <View className="flex flex-row justify-around items-center p-2 relative">
         <Pressable
           onPress={() => {
             router.back();
           }}
         >
-          <Text className="text-cyan-300">
+          <Text className="text-violet-950">
             <Icon name="arrow-back" size={30}></Icon>
           </Text>
         </Pressable>
         <TextInput
           placeholder="Search Exercise..."
-          className="px-4 py-2 bg-slate-200 w-[85%] text-lg rounded-lg text-gray-600 placeholder:text-sm"
+          className="px-4 py-2 bg-violet-50 w-[85%] text-lg rounded-lg text-gray-600 placeholder:text-sm"
           onChangeText={(text) => {
             setSearchText(text);
           }}
@@ -116,7 +116,7 @@ const AddExercisePage = () => {
               handleCheckPress();
             }}
           >
-            <Icon name="checkmark-circle" color={"#06b6d4"} size={70} />
+            <Icon name="checkmark-circle" color={"#2e1065"} size={70} />
           </TouchableOpacity>
         </View>
       )}

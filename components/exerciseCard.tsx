@@ -27,10 +27,10 @@ const ExerciseCard = memo(
             </View>
           </View>
           <View className="flex justify-center">
-            <Text className="text-white">
+            <Text className="">
               {item.name} ({item.equipment})
             </Text>
-            <Text className=" text-white">{item.bodyPart}</Text>
+            <Text className=" ">{item.bodyPart}</Text>
           </View>
         </View>
       </TouchableOpacity>

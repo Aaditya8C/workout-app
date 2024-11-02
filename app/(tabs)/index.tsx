@@ -10,9 +10,12 @@ import { Link, useRouter } from "expo-router";
 const Index = () => {
   const router = useRouter();
   return (
-    <SafeAreaView className="flex-1 bg-cyan-900 flex space-y-3" edges={["top"]}>
+    <SafeAreaView
+      className="flex-1 bg-violet-200 flex space-y-3"
+      edges={["top"]}
+    >
       <View className="pt-2 flex flex-row  justify-center gap-2 items-center">
-        <Text className="tracking-wider text-cyan-300 text-2xl font-bold">
+        <Text className="tracking-wider text-violet-950 text-2xl font-bold">
           Ready To
         </Text>
         <View
@@ -23,7 +26,7 @@ const Index = () => {
             className="w-10 h-10"
             source={require("../../assets/images/stretchlogo.png")}
           ></Image>
-          <Text className="font-bold tracking-wider text-orange-200 text-2xl">
+          <Text className="font-bold tracking-wider text-orange-400 text-2xl">
             Stretch
           </Text>
         </View>
@@ -33,7 +36,7 @@ const Index = () => {
       </View>
       <View className="flex flex-row flex-wrap justify-center  px-5 gap-6">
         <Pressable
-          className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
+          className="w-[40%] bg-violet-950 rounded-xl flex items-center p-3"
           style={{ elevation: 5 }}
           onPress={() => {
             router.replace("/ayurveda/");
@@ -43,11 +46,11 @@ const Index = () => {
             className="w-20 h-20 rounded-full"
             source={require("../../assets/images/ayurveda.png")}
           ></Image>
-          <Text className="text-sm font-bold p-1">Ayurveda</Text>
+          <Text className="text-sm font-bold p-1 text-white">Ayurveda</Text>
         </Pressable>
 
         <Pressable
-          className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
+          className="w-[40%] bg-violet-950 rounded-xl flex items-center p-3"
           onPress={() => {
             router.replace("/airecommendations");
           }}
@@ -57,10 +60,10 @@ const Index = () => {
             className="w-20 h-20"
             source={require("../../assets/images/ai.png")}
           ></Image>
-          <Text className="text-sm font-bold p-1">Chat with AI</Text>
+          <Text className="text-sm font-bold p-1 text-white">Chat with AI</Text>
         </Pressable>
         <Pressable
-          className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
+          className="w-[40%] bg-violet-950 rounded-xl flex items-center p-3"
           style={{ elevation: 5 }}
           onPress={() => {
             router.replace("/templates");
@@ -70,10 +73,10 @@ const Index = () => {
             className="w-20 h-20"
             source={require("../../assets/images/training.png")}
           ></Image>
-          <Text className="text-sm font-bold p-1">Workout Plan</Text>
+          <Text className="text-sm font-bold p-1 text-white">Workout Plan</Text>
         </Pressable>
         <Pressable
-          className="w-[40%] bg-cyan-600 rounded-xl flex items-center p-3"
+          className="w-[40%] bg-violet-950 rounded-xl flex items-center p-3"
           style={{ elevation: 5 }}
           onPress={() => {
             router.replace("/exercise/");
@@ -83,7 +86,9 @@ const Index = () => {
             className="w-20 h-20"
             source={require("../../assets/images/bookshelf.png")}
           ></Image>
-          <Text className="text-sm font-bold p-1">Exercise Library</Text>
+          <Text className="text-sm font-bold p-1 text-white">
+            Exercise Library
+          </Text>
         </Pressable>
       </View>
     </SafeAreaView>
