@@ -29,6 +29,11 @@ const tabs = [
     title: "AI",
     icon: "logo-apple-ar",
   },
+  {
+    name: "ayurveda",
+    title: "Ayurveda",
+    icon: "fitness-sharp",
+  },
 ];
 
 const TabsLayout = () => {

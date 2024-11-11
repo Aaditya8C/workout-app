@@ -28,14 +28,14 @@ const Exercise = () => {
     );
   }, [searchText]);
   return (
-    <SafeAreaView className="bg-violet-950">
+    <SafeAreaView className="bg-violet-200">
       <View className="flex flex-row justify-between items-center p-2 relative">
         <Pressable
           onPress={() => {
             router.replace("/");
           }}
         >
-          <Text className="text-violet-300">
+          <Text className="text-violet-950">
             <Icon name="arrow-back" size={30}></Icon>
           </Text>
         </Pressable>
@@ -65,7 +65,7 @@ const Exercise = () => {
         data={filteredData}
         renderItem={({ item }) => {
           return (
-            <View className="bg-violet-950">
+            <View className="bg-violet-200">
               <Link href={`/ayurveda/${item.id}`}>
                 <View className="flex flex-row space-x-3  px-3 py-2">
                   <View className="h-12 w-12">
@@ -78,12 +78,12 @@ const Exercise = () => {
                   </View>
                   <View className="flex justify-center">
                     <Text>
-                      <Text className=" font-semibold capitalize text-white">
+                      <Text className=" font-semibold capitalize">
                         {item.name}
                       </Text>
-                      <Text className="text-white">({item.equipment})</Text>
+                      <Text >({item.equipment})</Text>
                     </Text>
-                    <Text className=" text-white">{item.bodyPart}</Text>
+                    <Text >{item.bodyPart}</Text>
                   </View>
                 </View>
               </Link>
