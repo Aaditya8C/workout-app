@@ -46,8 +46,8 @@ const TabsLayout = () => {
           paddingVertical: 10,
           height: 60,
         },
-        tabBarActiveTintColor: "#fff3b0", // Active tab icon color
-        tabBarInactiveTintColor: "#000000", // Inactive tab icon color
+        tabBarActiveTintColor: "#fff370", // Active tab icon color
+        tabBarInactiveTintColor: "#ffff", // Inactive tab icon color
         tabBarAllowFontScaling: true,
       }}
     >
